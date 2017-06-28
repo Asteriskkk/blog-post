@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+{% block base%}
+
+{{form.media}}
+
+
+<body>
+
+
+<div class="row">
+    <div class="col-sm-4">
+<form method="POST" action="" enctype="multipart/form-data" >{% csrf_token%}
+
+{{form.as_p}}
+<input type="submit" value="create">
+</form>
+</div>
+<div class="col-sm-8">
+    <h1 style="text-align:center">preview</h1>
+<div class="content-preview">
+
+    <h1 id="preview-title"></h1>
+    <p id="preview-content"></p>
+
+
+</div>
+
+
+</div>
+</div>
+</body>
+{% endblock%}
